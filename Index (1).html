@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ogundipe Babatunde Abdullateef | Sales & Operations Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0A1628;
+    --navy-mid: #112240;
+    --navy-light: #1C3461;
+    --gold: #C9943A;
+    --gold-light: #E8B86D;
+    --white: #FFFFFF;
+    --off-white: #F4F6FA;
+    --gray: #8892A4;
+    --light-gray: #CDD5E0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 22, 40, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201, 148, 58, 0.2);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201,148,58,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: var(--gold-light);
+    font-weight: 300;
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-summary {
+    max-width: 600px;
+    font-size: 1rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+
+  /* NUMBERS — the signature element */
+  .hero-numbers {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+
+  .number-item { display: flex; flex-direction: column; }
+
+  .number-figure {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .number-label {
+    font-size: 0.75rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 6px;
+    max-width: 140px;
+    line-height: 1.4;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 32px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    padding: 14px 32px;
+    border: 1px solid var(--gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-outline:hover {
+    background: rgba(201,148,58,0.1);
+    transform: translateY(-2px);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 48px;
+    line-height: 1.2;
+  }
+
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(201,148,58,0.15);
+    margin: 0 auto;
+  }
+
+  /* COMPETENCIES */
+  .competencies-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .competency-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(201,148,58,0.15);
+    padding: 28px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .competency-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+  }
+
+  .competency-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(201,148,58,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+  }
+
+  .competency-title {
+    font-weight: 600;
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .competency-desc {
+    font-size: 0.82rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* EXPERIENCE */
+  .experience-list { display: flex; flex-direction: column; gap: 0; }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(201,148,58,0.1);
+    position: relative;
+  }
+
+  .exp-item:last-child { border-bottom: none; }
+
+  .exp-meta { padding-top: 4px; }
+
+  .exp-dates {
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .exp-company {
+    font-size: 0.82rem;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  .exp-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .exp-location {
+    font-size: 0.78rem;
+    color: var(--gray);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .exp-bullets li {
+    font-size: 0.88rem;
+    color: var(--light-gray);
+    line-height: 1.7;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .exp-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .exp-result {
+    display: inline-block;
+    background: rgba(201,148,58,0.1);
+    border-left: 2px solid var(--gold);
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    color: var(--gold-light);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* ACHIEVEMENTS */
+  .achievements-section {
+    background: var(--navy-mid);
+    padding: 100px 40px;
+  }
+
+  .achievements-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .achievement-card {
+    border: 1px solid rgba(201,148,58,0.2);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+  }
+
+  .achievement-card:hover { border-color: var(--gold); }
+
+  .achievement-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .achievement-label {
+    font-weight: 600;
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .achievement-desc {
+    font-size: 0.82rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+  }
+
+  .skill-group-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(201,148,58,0.2);
+  }
+
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-list li {
+    font-size: 0.88rem;
+    color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .skill-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* EDUCATION */
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .edu-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(201,148,58,0.15);
+    padding: 32px;
+    transition: border-color 0.2s;
+  }
+
+  .edu-card:hover { border-color: var(--gold); }
+
+  .edu-degree {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .edu-institution {
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+
+  .edu-detail {
+    font-size: 0.8rem;
+    color: var(--gray);
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--navy-mid);
+    padding: 100px 40px;
+    text-align: center;
+  }
+
+  .contact-inner { max-width: 700px; margin: 0 auto; }
+
+  .contact-intro {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 48px;
+    line-height: 1.8;
+  }
+
+  .contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .contact-type {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .contact-value {
+    font-size: 0.95rem;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .contact-value a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-value a:hover { color: var(--gold); }
+
+  /* FOOTER */
+  footer {
+    padding: 32px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(201,148,58,0.1);
+    font-size: 0.78rem;
+    color: var(--gray);
+  }
+
+  footer span { color: var(--gold); }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 20px 60px; }
+    section { padding: 70px 20px; }
+    .achievements-section { padding: 70px 20px; }
+    .contact-section { padding: 70px 20px; }
+    .exp-item { grid-template-columns: 1fr; gap: 8px; }
+    .exp-meta { padding-top: 0; }
+    .hero-numbers { gap: 28px; }
+  }
+
+  /* SCROLL ANIMATION */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Tunde-Olu</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="about">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Lagos, Nigeria · Available for new opportunities</p>
+    <h1 class="hero-name">Ogundipe<br>Babatunde<br>Abdullateef</h1>
+    <p class="hero-title">Sales Operations · Distribution & Logistics · Finance & Revenue Operations</p>
+    <p class="hero-summary">
+      I build commercial coverage, recover revenue, and make operations run cleaner. 
+      Seven years across field sales, warehouse distribution, and finance reconciliation — 
+      delivering measurable results in environments where execution rigour and business outcomes are both expected.
+    </p>
+
+    <div class="hero-numbers">
+      <div class="number-item">
+        <span class="number-figure">63%</span>
+        <span class="number-label">Account base growth — 52 to 85 outlets</span>
+      </div>
+      <div class="number-item">
+        <span class="number-figure">100%</span>
+        <span class="number-label">Documentation accuracy at Nestle Nigeria, 15 months</span>
+      </div>
+      <div class="number-item">
+        <span class="number-figure">10%</span>
+        <span class="number-label">Bad-debt exposure across two sales tenures</span>
+      </div>
+      <div class="number-item">
+        <span class="number-figure">35%</span>
+        <span class="number-label">Reduction in reporting errors at Classique Royal Academy</span>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+      <a href="#experience" class="btn-outline">View Experience</a>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- COMPETENCIES -->
+<section>
+  <p class="section-eyebrow">What I Do</p>
+  <h2 class="section-title">Core Competencies</h2>
+  <div class="competencies-wrap">
+    <div class="competency-card fade-in">
+      <div class="competency-icon">📍</div>
+      <div class="competency-title">Territory Sales & Route-to-Market</div>
+      <div class="competency-desc">Structured daily field coverage across multi-zone Lagos territories with A/B/C outlet classification, call-rate enforcement, and disciplined pipeline tracking.</div>
+    </div>
+    <div class="competency-card fade-in">
+      <div class="competency-icon">💰</div>
+      <div class="competency-title">Debt Recovery & Credit Control</div>
+      <div class="competency-desc">Credit-velocity matching, outstanding balance monitoring, and proactive intervention before exposure becomes loss. Bad-debt reduced to 10% across two separate credit-active tenures.</div>
+    </div>
+    <div class="competency-card fade-in">
+      <div class="competency-icon">📦</div>
+      <div class="competency-title">Warehouse & Distribution Operations</div>
+      <div class="competency-desc">Dispatch reconciliation, inventory variance monitoring, SLA tracking, and internal control compliance across high-volume FMCG distribution environments.</div>
+    </div>
+    <div class="competency-card fade-in">
+      <div class="competency-icon">📊</div>
+      <div class="competency-title">Revenue & Collections Reconciliation</div>
+      <div class="competency-desc">Cross-border transaction matching, payment verification, discrepancy investigation, and reconciliation template design that eliminates systemic reporting gaps.</div>
+    </div>
+    <div class="competency-card fade-in">
+      <div class="competency-icon">🗂️</div>
+      <div class="competency-title">Administrative Operations</div>
+      <div class="competency-desc">End-to-end office administration, payroll processing, vendor management, filing systems, compliance documentation, and stakeholder correspondence.</div>
+    </div>
+    <div class="competency-card fade-in">
+      <div class="competency-icon">📈</div>
+      <div class="competency-title">Operational Reporting & Analysis</div>
+      <div class="competency-desc">Daily, weekly, and monthly structured performance reports across sales, operations, and finance functions — variance analysis, exception flagging, and management dashboards.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-eyebrow">Career History</p>
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="experience-list">
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">
+        <div class="exp-dates">Nov 2025 – Present</div>
+        <div class="exp-company">Dala Technologies<br>Lagos, Nigeria</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Sales Executive</div>
+        <div class="exp-location">Lagos Mainland Territory</div>
+        <ul class="exp-bullets">
+          <li>Manage a 28-brand consumer goods portfolio across Lagos Mainland territory covering supermarkets, neighbourhood stores, and open-market trade channels.</li>
+          <li>Execute structured daily outlet visits tracking stock levels, sell-through rates, shelf standards, and payment status per account on every call cycle.</li>
+          <li>Apply credit-velocity matching to monitor outstanding balances and reduce exposure on slow-moving accounts across the territory.</li>
+          <li>Maintain key account relationships with Spar, Blenco, Market Square, Justrite, and Emmatos — securing preferred shelf positioning for distributed brands.</li>
+          <li>Coordinate in-store retail activations managing display builds and promotional execution to drive trial and sell-through velocity.</li>
+        </ul>
+        <div class="exp-result">Reduced bad-debt exposure to 10% · 3 new key accounts onboarded · 28-brand portfolio across Lagos Mainland territory</div>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">
+        <div class="exp-dates">Aug 2024 – Nov 2025</div>
+        <div class="exp-company">Nestle Nigeria PLC<br>Sagamu, Ogun State</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Operations Support & Warehouse Assistant</div>
+        <div class="exp-location">Flowergate Factory — Distribution Centre</div>
+        <ul class="exp-bullets">
+          <li>Reconciled daily dispatch documentation against warehouse picking records and distribution schedules across a Tier-1 FMCG manufacturing facility.</li>
+          <li>Verified delivery records against shipment documentation; escalated discrepancies for corrective action and tracked each to resolution within SLA timelines.</li>
+          <li>Monitored inventory variances and supported audit procedure compliance across the distribution centre.</li>
+          <li>Prepared structured daily operational performance and variance analysis reports for management visibility.</li>
+        </ul>
+        <div class="exp-result">100% documentation accuracy across 15 months of high-volume dispatch and distribution reconciliation</div>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">
+        <div class="exp-dates">Aug 2023 – Jul 2024</div>
+        <div class="exp-company">FastLane Logistics<br>Guangzhou, China · Remote</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Operations & Revenue Documentation Support</div>
+        <div class="exp-location">Remote Contract — West Africa Corridor</div>
+        <ul class="exp-bullets">
+          <li>Reconciled shipment records against payment confirmations and vendor settlements across cross-border freight transactions.</li>
+          <li>Investigated discrepancies between shipment values and payment records, resolving mismatches affecting partner reconciliation and cash position reporting.</li>
+          <li>Designed reconciliation documentation templates that standardised transaction matching and eliminated recurring reporting inconsistencies across partner accounts.</li>
+        </ul>
+        <div class="exp-result">Eliminated recurring cross-border reconciliation inconsistencies through template redesign</div>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">
+        <div class="exp-dates">Apr 2021 – Dec 2023</div>
+        <div class="exp-company">Desmond J. Distribution Ltd.<br>Port Harcourt, Rivers State</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Sales Executive</div>
+        <div class="exp-location">Port Harcourt Sub-territory</div>
+        <ul class="exp-bullets">
+          <li>Managed 30 retail accounts responsible for SKU availability, shelf standards, and monthly sell-in targets across Nestle Nigeria, Close Up (Unilever), and Chi Limited product lines.</li>
+          <li>Consistently achieved 95%–105% of monthly numeric distribution targets across all principals.</li>
+          <li>Grew active account base from 52 to 85 outlets — a 63% increase — through systematic territory whitespace analysis and structured account onboarding.</li>
+          <li>Reduced bad-debt exposure to 10% across the tenure through disciplined payment tracking and credit limit enforcement.</li>
+        </ul>
+        <div class="exp-result">63% account growth (52 → 85 outlets) · Bad-debt reduced to 10% · 95%–105% target achievement across full tenure</div>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-meta">
+        <div class="exp-dates">Apr 2019 – Mar 2021</div>
+        <div class="exp-company">Classique Royal Academy<br>Ikenne Remo, Ogun State</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Administrative Officer / Bursar</div>
+        <div class="exp-location">Ikenne Remo, Ogun State</div>
+        <ul class="exp-bullets">
+          <li>Managed daily fee collections across cash, POS, and bank transfer channels — reconciling against ledger records and bank deposits each day.</li>
+          <li>Processed vendor payments and staff payroll with full accounting documentation; resolved all payment discrepancies in student financial records.</li>
+          <li>Digitised 3+ years of financial and academic records — reducing reporting errors by 35% and transforming audit readiness from reactive to proactive.</li>
+          <li>Designed improved file management systems and internal financial controls, cutting annual audit preparation time by an estimated 40%.</li>
+        </ul>
+        <div class="exp-result">35% reduction in reporting errors · ~40% faster audit preparation through structured digitisation</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ACHIEVEMENTS -->
+<div class="achievements-section" id="achievements">
+  <div class="achievements-inner">
+    <p class="section-eyebrow">Track Record</p>
+    <h2 class="section-title">Key Achievements</h2>
+    <div class="achievements-grid">
+      <div class="achievement-card fade-in">
+        <div class="achievement-number">63%</div>
+        <div class="achievement-label">Account Base Growth</div>
+        <div class="achievement-desc">Grew active outlet coverage from 52 to 85 accounts at Desmond J. Distribution across Nestle, Close Up, and Chi product lines — reducing bad-debt exposure to 10% across tenure.</div>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="achievement-number">100%</div>
+        <div class="achievement-label">Documentation Accuracy</div>
+        <div class="achievement-desc">Sustained zero-error dispatch and distribution reconciliation across Nestle Nigeria's Flowergate Factory over a full 15-month tenure at one of Nigeria's highest-volume FMCG distribution centres.</div>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="achievement-number">10%</div>
+        <div class="achievement-label">Bad-Debt Reduction</div>
+        <div class="achievement-desc">Reduced bad-debt exposure to 10% across two separate sales tenures — at Desmond J. Distribution and 8 months at Dala Technologies — through disciplined credit management on active territories.</div>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="achievement-number">35%</div>
+        <div class="achievement-label">Error Reduction</div>
+        <div class="achievement-desc">Eliminated recurring financial reporting errors at Classique Royal Academy through full digitisation of 3+ years of records, cutting annual audit preparation time by approximately 40%.</div>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="achievement-number">28</div>
+        <div class="achievement-label">Brands Managed Simultaneously</div>
+        <div class="achievement-desc">Currently managing a 28-brand consumer goods portfolio across Lagos Mainland territory at Dala Technologies with structured outlet classification and active debt control.</div>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="achievement-number">105%</div>
+        <div class="achievement-label">Monthly Target Achievement</div>
+        <div class="achievement-desc">Consistently achieved 95%–105% of monthly numeric distribution targets at Desmond J. Distribution — recognised as top-performing Sales Executive across multiple consecutive periods.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-eyebrow">Capabilities</p>
+  <h2 class="section-title">Skills & Tools</h2>
+  <div class="skills-grid">
+    <div class="fade-in">
+      <div class="skill-group-title">Sales & Commercial</div>
+      <ul class="skill-list">
+        <li>Territory Sales & Route-to-Market Planning</li>
+        <li>Retail Outlet Classification (A/B/C)</li>
+        <li>Debt Recovery & Credit Control</li>
+        <li>FMCG Brand Portfolio Management</li>
+        <li>Key Account Management</li>
+        <li>B2B Client Acquisition</li>
+      </ul>
+    </div>
+    <div class="fade-in">
+      <div class="skill-group-title">Operations & Finance</div>
+      <ul class="skill-list">
+        <li>Warehouse & Distribution Operations</li>
+        <li>Revenue & Collections Reconciliation</li>
+        <li>Inventory Variance Analysis</li>
+        <li>Internal Controls & Audit Support</li>
+        <li>Vendor & Payroll Processing</li>
+        <li>Process Improvement & Documentation</li>
+      </ul>
+    </div>
+    <div class="fade-in">
+      <div class="skill-group-title">Technical Tools</div>
+      <ul class="skill-list">
+        <li>Microsoft Excel — Reporting, Dashboards, Data Entry</li>
+        <li>Google Workspace — Sheets, Docs, Drive</li>
+        <li>Microsoft Word & PowerPoint</li>
+        <li>HubSpot CRM (In View, 2026)</li>
+        <li>Canva, Notion, Zoom</li>
+        <li>Data Analysis Certification — In View 2026</li>
+      </ul>
+    </div>
+    <div class="fade-in">
+      <div class="skill-group-title">Professional</div>
+      <ul class="skill-list">
+        <li>Structured Daily & Weekly Reporting</li>
+        <li>Cross-functional Team Collaboration</li>
+        <li>Stakeholder Communication</li>
+        <li>Problem Solving & Exception Resolution</li>
+        <li>Independent Working & Self-Management</li>
+        <li>Fast Learner on New Products & Industries</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- EDUCATION -->
+<section>
+  <p class="section-eyebrow">Education</p>
+  <h2 class="section-title">Academic Background</h2>
+  <div class="education-grid">
+    <div class="edu-card fade-in">
+      <div class="edu-degree">B.Sc. Mathematics & Statistics</div>
+      <div class="edu-institution">Ignatius Ajuru University of Education, Rivers State</div>
+      <div class="edu-detail">CGPA: 3.42 · Applied Quantitative Focus · 2024</div>
+    </div>
+    <div class="edu-card fade-in">
+      <div class="edu-degree">National Diploma — Statistics & Mathematics</div>
+      <div class="edu-institution">Ibadan City Polytechnic, Oyo State</div>
+      <div class="edu-detail">Upper Credit · CGPA: 3.32 · 2018</div>
+    </div>
+    <div class="edu-card fade-in">
+      <div class="edu-degree">HubSpot Inbound & Outbound Sales Certification</div>
+      <div class="edu-institution">HubSpot Academy</div>
+      <div class="edu-detail">In View · 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <p class="section-eyebrow">Get in Touch</p>
+    <h2 class="section-title">Let's Talk</h2>
+    <p class="contact-intro">
+      Open to roles in sales operations, business development, distribution management, 
+      and finance operations across Lagos. Available for immediate discussion.
+    </p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="contact-type">Phone</span>
+        <span class="contact-value"><a href="tel:+2349161073818">09161073818</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">Phone</span>
+        <span class="contact-value"><a href="tel:+2348058842620">08058842620</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">Email</span>
+        <span class="contact-value"><a href="mailto:ogundipetundeolu@gmail.com">ogundipetundeolu@gmail.com</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">LinkedIn</span>
+        <span class="contact-value"><a href="https://linkedin.com/in/ogundipe-babatunde-abdullateef" target="_blank">View Profile</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">Location</span>
+        <span class="contact-value">Ipaja, Lagos State</span>
+      </div>
+    </div>
+    <a href="mailto:ogundipetundeolu@gmail.com" class="btn-primary">Send an Email</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>Ogundipe Babatunde Abdullateef</span> · Lagos, Nigeria · Built to compete at the top level</p>
+</footer>
+
+<script>
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Nav active state
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === '#' + current ? '#C9943A' : '';
+    });
+  });
+</script>
+
+</body>
+</html>
